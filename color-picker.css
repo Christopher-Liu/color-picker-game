@@ -1,0 +1,43 @@
+body{
+  margin: 0 0;
+  background: #2C2F30;
+}
+
+header{
+  margin: 0 0;
+  padding: 1px 1px;
+  color: #FFFFFF;
+  background: #39B3DB;
+}
+
+.container{
+  width: 95%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.grid{
+  padding: 20px 0;
+}
+
+.gridRow{
+  display: flex;
+  justify-content: space-between;
+  margin: 3% 3%;
+}
+
+.gridItem{
+  width: 30%;
+  max-width: 200px;
+  height: 160px;
+  border-radius: 15%;
+}
+
+
+
+
+@media(min-width: 768px){
+  .container{
+    width: 40%;
+  }
+}
