@@ -1,6 +1,6 @@
 body{
   margin: 0 0;
-  background: #2C2F30;
+  background: #232323;
 }
 
 header{
@@ -8,13 +8,29 @@ header{
   padding: 1px 1px;
   color: #FFFFFF;
   background: #39B3DB;
+  text-align: center;
 }
 
 .container{
   width: 95%;
+  max-width: 650px;
   margin: 0 auto;
-  text-align: center;
 }
+
+#options{
+  display: flex;
+}
+
+.optionsItem{
+  flex: 1;
+}
+
+#difficultySelectors{
+  display: flex;
+  justify-content: space-around;
+}
+
+
 
 .grid{
   padding: 20px 0;
@@ -31,13 +47,12 @@ header{
   max-width: 200px;
   height: 160px;
   border-radius: 15%;
+
+
 }
 
 
 
 
 @media(min-width: 768px){
-  .container{
-    width: 40%;
-  }
 }

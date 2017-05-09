@@ -1,6 +1,6 @@
 var rgbTextDisplay = document.querySelector("#colorToGuess");
 var colorBoxes = document.querySelectorAll(".gridItem");
-
+var gameIsLive = true;
 
 /* Function for generating the random color */
 function getRandomHexColor(){
@@ -16,14 +16,22 @@ function getRandomHexColor(){
 
 
 
-/* Selecting one of the color values to be the value to guess */
-var correctColorIndex = Math.floor(Math.random()*6);
+/* The game will be running as long as the variable gameIsLive is set to true */
+while (gameIsLive) {
 
-/* Giving all of the boxes a random color */
-for (var i=0; i<colorBoxes.length; i++){
-  colorBoxes[i].style.backgroundColor = getRandomHexColor();
 
-  if (i == correctColorIndex) {
-    rgbTextDisplay.textContent = colorBoxes[i].style.backgroundColor;
+
+
+
+  /* Selecting one of the color values to be the value to guess */
+  var correctColorIndex = Math.floor(Math.random()*6);
+
+  /* Giving all of the boxes a random color */
+  for (var i=0; i<colorBoxes.length; i++){
+    colorBoxes[i].style.backgroundColor = getRandomHexColor();
+
+    if (i == correctColorIndex) {
+      rgbTextDisplay.textContent = colorBoxes[i].style.backgroundColor;
+    }
   }
 }

@@ -3,23 +3,28 @@
 <head>
   <title>Color Picking Game</title>
   <link rel="stylesheet" type="text/css" href="color-picker.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
   <header>
     <div class="container">
-      <h2>COLOR PICKER GAME 2000</h2>
+      <div id="headerText">
+        <h2>COLOR PICKER GAME 2000</h2>
+        <h1 id="colorToGuess"></h1>
+      </div>
 
-      <h1 id="colorToGuess"></h1>
+      <div id="options">
+        <p id="newGameButton" class="optionsItem"> New Game </p>
+        <p id="gameStatus" class="optionsItem"> </p>
+
+        <span id="difficultySelectors" class="optionsItem">
+          <p id="selectorEasy">Easy</p>
+          <p id="selectorHard">Hard</p>
+        </span>
+      </div>
     </div>
   </header>
-
-
-  <div class="options">
-    <p> </p>
-    <p> </p>
-    <p> </p>
-  </div>
 
 
   <div class="grid">
