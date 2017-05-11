@@ -17,21 +17,15 @@ function getRandomHexColor(){
 
 
 /* The game will be running as long as the variable gameIsLive is set to true */
-while (gameIsLive) {
-
-
-
-
 
   /* Selecting one of the color values to be the value to guess */
-  var correctColorIndex = Math.floor(Math.random()*6);
+var correctColorIndex = Math.floor(Math.random()*6);
 
-  /* Giving all of the boxes a random color */
-  for (var i=0; i<colorBoxes.length; i++){
-    colorBoxes[i].style.backgroundColor = getRandomHexColor();
+/* Giving all of the boxes a random color */
+for (var i=0; i<colorBoxes.length; i++){
+  colorBoxes[i].style.backgroundColor = getRandomHexColor();
 
-    if (i == correctColorIndex) {
-      rgbTextDisplay.textContent = colorBoxes[i].style.backgroundColor;
-    }
+  if (i == correctColorIndex) {
+    rgbTextDisplay.textContent = colorBoxes[i].style.backgroundColor;
   }
 }
