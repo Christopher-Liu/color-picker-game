@@ -1,6 +1,8 @@
 var rgbTextDisplay = document.querySelector("#colorToGuess");
+var pageHeader = document.querySelector("header");
+var gameStatusText = document.querySelector("#gameStatus");
 var colorBoxes = document.querySelectorAll(".gridItem");
-var gameIsLive = true;
+var selectedColor;
 
 /* Function for generating the random color */
 function getRandomHexColor(){
@@ -16,16 +18,51 @@ function getRandomHexColor(){
 
 
 
-/* The game will be running as long as the variable gameIsLive is set to true */
-
+/* Creating a reusable function to handle the creation of the colored grid */
+function createBoxes() {
   /* Selecting one of the color values to be the value to guess */
-var correctColorIndex = Math.floor(Math.random()*6);
+  correctColorIndex = Math.floor(Math.random()*6);
 
-/* Giving all of the boxes a random color */
-for (var i=0; i<colorBoxes.length; i++){
-  colorBoxes[i].style.backgroundColor = getRandomHexColor();
+  /* Giving all of the boxes a random color */
+  for (var i=0; i<colorBoxes.length; i++){
+    colorBoxes[i].style.backgroundColor = getRandomHexColor();
 
-  if (i == correctColorIndex) {
-    rgbTextDisplay.textContent = colorBoxes[i].style.backgroundColor;
+    if (i == correctColorIndex) {
+      rgbTextDisplay.textContent = selectedColor = colorBoxes[i].style.backgroundColor;
+    }
   }
 }
+createBoxes(); /* Calling createBoxes() right away to generate the boxes on the webpage */
+
+
+
+function winningSelection() {
+  for (var i=0; i<colorBoxes.length; i++){
+    colorBoxes[i].classList.remove("incorrectClick");
+    colorBoxes[i].style.backgroundColor = selectedColor;
+  }
+
+  pageHeader.style.backgroundColor = selectedColor;
+  gameStatus.textContent = "Nice Job!";
+}
+
+
+
+/* Adding event handlers for behavior of boxes when clicked */
+for (var i=0; i<colorBoxes.length; i++){
+  colorBoxes[i].addEventListener("click", function(){
+    /* The "incorrectClick" class will only be added if the user clicks the wrong box.
+    If the user does select the correct class, we change all boxes and the header to
+    the selected color */
+    if (selectedColor != this.style.backgroundColor) {
+      this.classList.add("incorrectClick");
+    }
+    else {
+      winningSelection();
+    }
+  });
+}
+
+
+
+/* Adding behavior for the "New Game" button */

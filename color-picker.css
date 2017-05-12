@@ -30,6 +30,12 @@ header{
   justify-content: space-around;
 }
 
+#gameStatus{
+  font-size: 1.75em;
+  padding: 0 0;
+  margin: 0 0;
+}
+
 
 
 .grid{
@@ -47,8 +53,13 @@ header{
   max-width: 200px;
   height: 160px;
   border-radius: 15%;
+}
 
 
+
+
+.incorrectClick{
+  opacity: 0;
 }
 
 
