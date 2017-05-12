@@ -1,5 +1,6 @@
 var rgbTextDisplay = document.querySelector("#colorToGuess");
 var pageHeader = document.querySelector("header");
+var newGameButton = document.querySelector("#newGameButton");
 var gameStatusText = document.querySelector("#gameStatus");
 var colorBoxes = document.querySelectorAll(".gridItem");
 var selectedColor;
@@ -56,6 +57,7 @@ for (var i=0; i<colorBoxes.length; i++){
     the selected color */
     if (selectedColor != this.style.backgroundColor) {
       this.classList.add("incorrectClick");
+      gameStatus.textContent = "Try Again";
     }
     else {
       winningSelection();
@@ -66,3 +68,8 @@ for (var i=0; i<colorBoxes.length; i++){
 
 
 /* Adding behavior for the "New Game" button */
+newGameButton.addEventListener("click", function() {
+  pageHeader.style.backgroundColor = "#39B3DB";
+  gameStatus.textContent = "";
+  createBoxes();
+})

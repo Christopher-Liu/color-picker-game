@@ -3,37 +3,43 @@ body{
   background: #232323;
 }
 
-header{
-  margin: 0 0;
-  padding: 1px 1px;
-  color: #FFFFFF;
-  background: #39B3DB;
-  text-align: center;
-}
-
 .container{
   width: 95%;
   max-width: 650px;
   margin: 0 auto;
 }
 
+header{
+  padding: 3% 0;
+  color: #FFFFFF;
+  background: #39B3DB;
+  text-align: center;
+}
+
+.headerItem{
+  margin: 0 0;
+}
+
+#colorToGuess{
+  font-size: 3em;
+}
+
 #options{
+  background: #FFFFFF;
+  text-align: center;
+}
+
+#options .container{
   display: flex;
 }
 
-.optionsItem{
+#options .container .optionsItem{
   flex: 1;
 }
 
 #difficultySelectors{
   display: flex;
   justify-content: space-around;
-}
-
-#gameStatus{
-  font-size: 1.75em;
-  padding: 0 0;
-  margin: 0 0;
 }
 
 
