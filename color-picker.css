@@ -11,8 +11,9 @@ body{
 
 header{
   padding: 3% 0;
-  color: #FFFFFF;
   background: #39B3DB;
+  font-family: 'Russo One', sans-serif;
+  color: #FFFFFF;
   text-align: center;
   transition: background 0.25s ease;
 }
@@ -26,9 +27,11 @@ header{
 }
 
 
+
 #options{
   background: #FFFFFF;
   text-align: center;
+  font-family: 'Monda', sans-serif;
 }
 
 #options .container{
@@ -37,11 +40,6 @@ header{
 
 #options .container .optionsItem{
   flex: 1;
-}
-
-#difficultySelectors{
-  display: flex;
-  justify-content: space-around;
 }
 
 
@@ -63,7 +61,6 @@ header{
   border-radius: 15%;
   transition: opacity 0.25s ease;
 }
-
 
 
 
