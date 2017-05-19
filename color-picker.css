@@ -42,7 +42,11 @@ header{
   flex: 1;
 }
 
-
+#footerText {
+  margin-top: 50px;
+  color: gray;
+  text-align: center;
+}
 
 .grid{
   padding: 20px 0;

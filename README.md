@@ -1,0 +1,3 @@
+- Mock web application by Christopher Liu
+- Creating a RGB color picking game modeled after the project in Colt Steele's Web Developer Bootcamp on Udemy
+- Note that I am not copying the code from the lecture videos, nor am I building the webpage alongside watching the guide. I am simply using the aesthetics and general function of the web application from the lecture videos as a guideline/model for me to try and build a mock webpage from scratch with the same functionality and general aesthetics
