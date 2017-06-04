@@ -18,7 +18,6 @@ function getRandomHexColor(){
 }
 
 
-
 /* Creating a reusable function to handle the creation of the colored grid */
 function createBoxes() {
   /* Selecting one of the color values to be the value to guess */
@@ -27,14 +26,13 @@ function createBoxes() {
   /* Giving all of the boxes a random color */
   for (var i=0; i<colorBoxes.length; i++){
     colorBoxes[i].style.backgroundColor = getRandomHexColor();
+    colorBoxes[i].classList.remove("incorrectClick");
 
     if (i == correctColorIndex) {
       rgbTextDisplay.textContent = selectedColor = colorBoxes[i].style.backgroundColor;
     }
   }
 }
-createBoxes(); /* Calling createBoxes() right away to generate the boxes on the webpage */
-
 
 
 function winningSelection() {
@@ -44,10 +42,14 @@ function winningSelection() {
   }
 
   pageHeader.style.backgroundColor = selectedColor;
+  newGameButton.textContent = "Play Again?";
   gameStatus.textContent = "Nice Job!";
 }
 
 
+
+/* The next snippets of code initialize the page */
+createBoxes();
 
 /* Adding event handlers for behavior of boxes when clicked */
 for (var i=0; i<colorBoxes.length; i++){
@@ -65,11 +67,10 @@ for (var i=0; i<colorBoxes.length; i++){
   });
 }
 
-
-
 /* Adding behavior for the "New Game" button */
 newGameButton.addEventListener("click", function() {
   pageHeader.style.backgroundColor = "#39B3DB";
+  newGameButton.textContent = "New Game";
   gameStatus.textContent = "";
   createBoxes();
 })

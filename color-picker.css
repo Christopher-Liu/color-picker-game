@@ -15,7 +15,7 @@ header{
   font-family: 'Russo One', sans-serif;
   color: #FFFFFF;
   text-align: center;
-  transition: background 0.25s ease;
+  transition: all 0.25s ease;
 }
 
 .headerItem{
@@ -23,24 +23,45 @@ header{
 }
 
 #colorToGuess{
-  font-size: 3em;
+  font-size: 2.5em;
 }
 
 
 
 #options{
   background: #FFFFFF;
+}
+
+#options .container {
+  height: 35px;
   text-align: center;
+}
+
+.optionsItem{
   font-family: 'Monda', sans-serif;
+  width: 30%;
+  font-size: 1em;
+  font-weight: 400;
 }
 
-#options .container{
-  display: flex;
+#gameStatus{
+  display: inline-block;
 }
 
-#options .container .optionsItem{
-  flex: 1;
+#newGameButton{
+  height: 100%;
+  border: none;
+  outline: none;
+  background-color: white;
+  transition: all 0.25s ease;
 }
+
+#newGameButton:hover{
+  background-color: #39B3DB;
+  color: white;
+}
+
+
 
 #footerText {
   margin-top: 50px;
@@ -61,7 +82,7 @@ header{
 .gridItem{
   width: 30%;
   max-width: 200px;
-  height: 160px;
+  height: 110px;
   border-radius: 15%;
   transition: opacity 0.25s ease;
 }
@@ -75,5 +96,12 @@ header{
 
 
 
-@media(min-width: 768px){
+@media(min-width: 480px){
+  #colorToGuess{
+    font-size: 3em;
+  }
+
+  .gridItem{
+    height: 160px;
+  }
 }
